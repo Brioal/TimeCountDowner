@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BD014D</color>
+    <color name="colorPrimaryDark">#BD014D</color>
+    <color name="colorAccent">#D89938</color>
+    <color name="colorBottomLayoutIconNormal">#494F5B</color>
+    <color name="colorBGWhite">#EFEFEF</color>
+    <color name="colorTextBlack">#292929</color>
+    <color name="colorTextLightBlack">#939393</color>
+    <color name="colorHalfTrans">#aa000000</color>
+</resources>

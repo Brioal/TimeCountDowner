@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.brioal.countdowner.CountDownerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_counter"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+</com.brioal.countdowner.CountDownerView>

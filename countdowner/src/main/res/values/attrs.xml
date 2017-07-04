@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownerView">
+        <!--背景颜色-->
+        <attr name="bgColor" format="color" />
+        <!--剩余的毫秒数-->
+        <attr name="timeLeft" format="integer" />
+        <!--文字大小-->
+        <attr name="textSize" format="dimension" />
+        <!--标签文字颜色-->
+        <attr name="labelTextColor" format="color" />
+        <!--文字颜色-->
+        <attr name="numTextColor" format="color" />
+    </declare-styleable>
+</resources>
