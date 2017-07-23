@@ -6,7 +6,7 @@
         <!--剩余的毫秒数-->
         <attr name="timeLeft" format="integer" />
         <!--文字大小-->
-        <attr name="textSize" format="dimension" />
+        <attr name="textSize" format="integer" />
         <!--标签文字颜色-->
         <attr name="labelTextColor" format="color" />
         <!--文字颜色-->

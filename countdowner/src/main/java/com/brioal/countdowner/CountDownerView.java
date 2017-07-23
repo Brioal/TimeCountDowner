@@ -146,7 +146,7 @@ public class CountDownerView extends LinearLayout implements ViewTreeObserver.On
         //获取剩余时间
         mTimeLeft = array.getInteger(R.styleable.CountDownerView_timeLeft, 0);
         //获取文字大小
-        mTextSize = array.getDimensionPixelSize(R.styleable.CountDownerView_textSize, 7);
+        mTextSize = array.getInteger(R.styleable.CountDownerView_textSize, 6);
         //获取背景颜色
         mBgColor = array.getColor(R.styleable.CountDownerView_bgColor,Color.parseColor("#D89938"));
         //获取标签文字颜色
