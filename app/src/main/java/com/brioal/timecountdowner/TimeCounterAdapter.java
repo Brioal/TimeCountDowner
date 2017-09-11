@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.brioal.countdowner.CountDownerView;
+import com.brioal.countdowner.TimeCounter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class TimeCounterAdapter extends RecyclerView.Adapter<TimeCounterAdapter.
 
     @Override
     public void onBindViewHolder(TimeViewHolder holder, int position) {
-        holder.countDownerView.setmTimeLeft(mList.get(position));
+        holder.mTimeCounter.setmTimeLeft(mList.get(position));
     }
 
     @Override
@@ -65,15 +65,15 @@ public class TimeCounterAdapter extends RecyclerView.Adapter<TimeCounterAdapter.
     }
 
     class TimeViewHolder extends RecyclerView.ViewHolder{
-        CountDownerView countDownerView;
+        TimeCounter mTimeCounter;
         public TimeViewHolder(View itemView) {
             super(itemView);
-            countDownerView = itemView.findViewById(R.id.item_counter);
-            countDownerView.build();
+            mTimeCounter = itemView.findViewById(R.id.item_counter);
+            mTimeCounter.build();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String msg = countDownerView.getmNumDay() + ":" + countDownerView.getmNumHour() + ":" + countDownerView.getmNumMinutes() + ":" + countDownerView.getmNumSeconds();
+                    String msg = mTimeCounter.getmNumDay() + ":" + mTimeCounter.getmNumHour() + ":" + mTimeCounter.getmNumMinutes() + ":" + mTimeCounter.getmNumSeconds();
                     Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                 }
             });

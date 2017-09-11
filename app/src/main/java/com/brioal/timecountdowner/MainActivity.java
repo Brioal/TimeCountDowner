@@ -6,18 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.brioal.countdowner.CountDownerView;
+import com.brioal.countdowner.TimeCounter;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnList;
-    private CountDownerView mCounter;
+    private TimeCounter mCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBtnList = (Button) findViewById(R.id.main_btn_list);
-        mCounter = (CountDownerView) findViewById(R.id.main_counter);
+        mCounter = (TimeCounter) findViewById(R.id.main_counter);
         mCounter.build();
         mBtnList.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -19,7 +19,7 @@ import android.widget.TextView;
  * Github : https://github.com/Brioal
  */
 
-public class CountDownerView extends LinearLayout {
+public class TimeCounter extends LinearLayout {
     private Context mContext;
 
     //Views
@@ -52,7 +52,7 @@ public class CountDownerView extends LinearLayout {
     private boolean isShowSecond = true;//是否显示秒数
 
 
-    public CountDownerView(Context context) {
+    public TimeCounter(Context context) {
         this(context, null);
     }
 
@@ -60,7 +60,7 @@ public class CountDownerView extends LinearLayout {
         return isShowDay;
     }
 
-    public CountDownerView setShowDay(boolean showDay) {
+    public TimeCounter setShowDay(boolean showDay) {
         isShowDay = showDay;
         return this;
     }
@@ -69,7 +69,7 @@ public class CountDownerView extends LinearLayout {
         return isShowHour;
     }
 
-    public CountDownerView setShowHour(boolean showHour) {
+    public TimeCounter setShowHour(boolean showHour) {
         isShowHour = showHour;
         return this;
     }
@@ -78,7 +78,7 @@ public class CountDownerView extends LinearLayout {
         return isShowMinute;
     }
 
-    public CountDownerView setShowMinute(boolean showMinute) {
+    public TimeCounter setShowMinute(boolean showMinute) {
         isShowMinute = showMinute;
         return this;
     }
@@ -87,7 +87,7 @@ public class CountDownerView extends LinearLayout {
         return isShowSecond;
     }
 
-    public CountDownerView setShowSecond(boolean showSecond) {
+    public TimeCounter setShowSecond(boolean showSecond) {
         isShowSecond = showSecond;
         return this;
     }
@@ -98,7 +98,7 @@ public class CountDownerView extends LinearLayout {
      * @param mBgColor
      * @return
      */
-    public CountDownerView setmBgColor(int mBgColor) {
+    public TimeCounter setmBgColor(int mBgColor) {
         this.mBgColor = mBgColor;
         return this;
     }
@@ -109,7 +109,7 @@ public class CountDownerView extends LinearLayout {
      * @param mTimeLeft
      * @return
      */
-    public CountDownerView setmTimeLeft(int mTimeLeft) {
+    public TimeCounter setmTimeLeft(int mTimeLeft) {
         this.mTimeLeft = mTimeLeft;
         return this;
     }
@@ -120,7 +120,7 @@ public class CountDownerView extends LinearLayout {
      * @param mTextSize
      * @return
      */
-    public CountDownerView setmTextSize(int mTextSize) {
+    public TimeCounter setmTextSize(int mTextSize) {
         this.mTextSize = mTextSize;
         return this;
     }
@@ -131,7 +131,7 @@ public class CountDownerView extends LinearLayout {
      * @param mLabelTextColor
      * @return
      */
-    public CountDownerView setmLabelTextColor(int mLabelTextColor) {
+    public TimeCounter setmLabelTextColor(int mLabelTextColor) {
         this.mLabelTextColor = mLabelTextColor;
         return this;
     }
@@ -142,7 +142,7 @@ public class CountDownerView extends LinearLayout {
      * @param mNumTextColor
      * @return
      */
-    public CountDownerView setmNumTextColor(int mNumTextColor) {
+    public TimeCounter setmNumTextColor(int mNumTextColor) {
         this.mNumTextColor = mNumTextColor;
         return this;
     }
@@ -183,24 +183,24 @@ public class CountDownerView extends LinearLayout {
         return mNumSeconds;
     }
 
-    public CountDownerView(Context context, @Nullable AttributeSet attrs) {
+    public TimeCounter(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         initValues(attrs);
     }
 
     private void initValues(AttributeSet attrs) {
-        TypedArray array = mContext.obtainStyledAttributes(attrs, R.styleable.CountDownerView);
+        TypedArray array = mContext.obtainStyledAttributes(attrs, R.styleable.TimeCounter);
         //获取剩余时间
-        mTimeLeft = array.getInteger(R.styleable.CountDownerView_timeLeft, 0);
+        mTimeLeft = array.getInteger(R.styleable.TimeCounter_timeLeft, 0);
         //获取文字大小
-        mTextSize = array.getInteger(R.styleable.CountDownerView_textSize, 6);
+        mTextSize = array.getInteger(R.styleable.TimeCounter_textSize, 6);
         //获取背景颜色
-        mBgColor = array.getColor(R.styleable.CountDownerView_bgColor, Color.parseColor("#D89938"));
+        mBgColor = array.getColor(R.styleable.TimeCounter_bgColor, Color.parseColor("#D89938"));
         //获取标签文字颜色
-        mLabelTextColor = array.getColor(R.styleable.CountDownerView_labelTextColor, Color.BLACK);
+        mLabelTextColor = array.getColor(R.styleable.TimeCounter_labelTextColor, Color.BLACK);
         //获取文字颜色
-        mNumTextColor = array.getColor(R.styleable.CountDownerView_numTextColor, Color.WHITE);
+        mNumTextColor = array.getColor(R.styleable.TimeCounter_numTextColor, Color.WHITE);
         array.recycle();
     }
 

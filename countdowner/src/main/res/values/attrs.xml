@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CountDownerView">
+    <declare-styleable name="TimeCounter">
         <!--背景颜色-->
         <attr name="bgColor" format="color" />
         <!--剩余的毫秒数-->
