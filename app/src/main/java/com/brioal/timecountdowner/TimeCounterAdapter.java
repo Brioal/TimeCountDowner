@@ -69,6 +69,7 @@ public class TimeCounterAdapter extends RecyclerView.Adapter<TimeCounterAdapter.
         public TimeViewHolder(View itemView) {
             super(itemView);
             countDownerView = itemView.findViewById(R.id.item_counter);
+            countDownerView.build();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

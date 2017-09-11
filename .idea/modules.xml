@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TimeCountDowner.iml" filepath="$PROJECT_DIR$/TimeCountDowner.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TimeCountDowner.iml" filepath="$PROJECT_DIR$/TimeCountDowner.iml" />
+      <module fileurl="file://C:\Users\Brioal\Desktop\TimeCountDowner\TimeCountDowner.iml" filepath="C:\Users\Brioal\Desktop\TimeCountDowner\TimeCountDowner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Brioal\Desktop\TimeCountDowner\app\app.iml" filepath="C:\Users\Brioal\Desktop\TimeCountDowner\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/countdowner/countdowner.iml" filepath="$PROJECT_DIR$/countdowner/countdowner.iml" />
-      <module fileurl="file://$PROJECT_DIR$/countdowner/countdowner.iml" filepath="$PROJECT_DIR$/countdowner/countdowner.iml" />
+      <module fileurl="file://C:\Users\Brioal\Desktop\TimeCountDowner\countdowner\countdowner.iml" filepath="C:\Users\Brioal\Desktop\TimeCountDowner\countdowner\countdowner.iml" />
     </modules>
   </component>
 </project>
