@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBtnList = (Button) findViewById(R.id.main_btn_list);
         mCounter = (TimeCounter) findViewById(R.id.main_counter);
+        mCounter.setWithOutZero(true);
+        mCounter.setStatic(true);
+        mCounter.setmTimeLeft(25 * 60);
         mCounter.build();
         mBtnList.setOnClickListener(new View.OnClickListener() {
             @Override

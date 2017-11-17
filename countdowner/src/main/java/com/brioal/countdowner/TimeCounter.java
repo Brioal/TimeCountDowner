@@ -51,9 +51,28 @@ public class TimeCounter extends LinearLayout {
     private boolean isShowMinute = true;//是否显示分数
     private boolean isShowSecond = true;//是否显示秒数
 
+    private boolean isWithOutZero = false;//是否不显示为0的数字
+    private boolean isStatic = false;//是否是静态的
+
 
     public TimeCounter(Context context) {
         this(context, null);
+    }
+
+    /**
+     * 设置是否显示0
+     * @param withOutZero
+     */
+    public void setWithOutZero(boolean withOutZero) {
+        isWithOutZero = withOutZero;
+    }
+
+    /**
+     * 设置是否是静态的
+     * @param aStatic
+     */
+    public void setStatic(boolean aStatic) {
+        isStatic = aStatic;
     }
 
     public boolean isShowDay() {
@@ -371,6 +390,38 @@ public class TimeCounter extends LinearLayout {
                 mNumSeconds = currentTime;
             }
         }
+        if (isWithOutZero) {
+            //不显示0
+            if (mNumDay == 0) {
+                mTvNumDay.setVisibility(GONE);
+                mTvLabelDay.setVisibility(GONE);
+
+            } else {
+                mTvNumDay.setVisibility(VISIBLE);
+                mTvLabelDay.setVisibility(VISIBLE);
+            }
+            if (mNumHour == 0) {
+                mTvNumHour.setVisibility(GONE);
+                mTvLabelHour.setVisibility(GONE);
+            } else {
+                mTvNumHour.setVisibility(VISIBLE);
+                mTvLabelHour.setVisibility(VISIBLE);
+            }
+            if (mNumMinutes == 0) {
+                mTvNumMinutes.setVisibility(GONE);
+                mTvLabelMinutes.setVisibility(GONE);
+            } else {
+                mTvNumMinutes.setVisibility(VISIBLE);
+                mTvLabelMinutes.setVisibility(VISIBLE);
+            }
+            if (mNumSeconds == 0) {
+                mTvNumSeconds.setVisibility(GONE);
+                mTvLabelSeconds.setVisibility(GONE);
+            } else {
+                mTvNumSeconds.setVisibility(VISIBLE);
+                mTvLabelSeconds.setVisibility(VISIBLE);
+            }
+        }
         mTvNumDay.setText(supZero(mNumDay));
         mTvNumHour.setText(supZero(mNumHour));
         mTvNumMinutes.setText(supZero(mNumMinutes));
@@ -382,7 +433,9 @@ public class TimeCounter extends LinearLayout {
                 if (mTimeLeft <= 0) {
                     return;
                 }
-                refreshTime();
+                if (!isStatic) {
+                    refreshTime();
+                }
             }
         }, 1000);
     }
